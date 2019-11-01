@@ -1,0 +1,55 @@
+.calculator {
+  width: 100vw;
+  height: 100vh;
+  padding: 4px;
+  box-sizing: border-box;
+
+  font-size: 56px;
+  font-family: sans-serif;
+  background: #212529;
+  color: #f8f9fa;
+
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 144px repeat(5, 1fr);
+  grid-template-areas:
+    "result result result result"
+    "top    top    top    right"
+    "keypad keypad keypad right"
+    "keypad keypad keypad right"
+    "keypad keypad keypad right"
+    "keypad keypad keypad right";
+}
+
+.calculator_keypad {
+  grid-area: keypad;
+  display: grid;
+  grid-gap: 4px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.calculator_operators-right {
+  grid-area: right;
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.calculator_operators-top {
+  grid-area: top;
+  display: grid;
+  grid-gap: 4px;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto;
+}
+
+.calculator_result {
+  grid-area: result;
+  display: grid;
+  grid-gap: 4px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}

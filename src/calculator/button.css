@@ -1,0 +1,16 @@
+.button {
+  font-size: 24px;
+  font-family: sans-serif;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 3px;
+
+  background: #495057;
+  color: #f8f9fa;
+}
+
+.button--orange {
+  background: #e8590c;
+}
