@@ -1,7 +1,14 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+
 import Calculator from './calculator'
+import { store } from './store'
 
-const container = document.getElementById('app')
+const App = (
+  <Provider store={store}>
+    <Calculator />
+  </Provider>
+)
 
-ReactDOM.render(<Calculator result={100} />, container)
+render(App, document.getElementById('app'))

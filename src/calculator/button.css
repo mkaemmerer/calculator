@@ -14,3 +14,8 @@
 .button--orange {
   background: #e8590c;
 }
+
+.button--active {
+  background: #ffa94d;
+  color: #212529;
+}
